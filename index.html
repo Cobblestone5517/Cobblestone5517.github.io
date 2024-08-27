@@ -1,24 +1,180 @@
 <!doctype html>
-<html>
+<html style="background-color: #FEFAF6; font-family: Poppins;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./build/css/main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
   <!-- Use cdn if failed to load css file -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link href="./build/css/main.css" rel="stylesheet"> -->
 </head>
 <body>
-  <h1 class="text-3xl font-bold">
-    Main Page :)
-  </h1>
-  <div class="grid grid-cols-3 gap-4">
-    <div class="..."><a href="./build/aiwritingtool.html">AI Writing Tool</a></div>
-    <div class="..."><a href="./build/revisionClassification.html">Modelling Revision Classification</a></div>
-    <div class="..."><a href="./build/calvinHacks2024.html">Object Detection with Large Image Files</a></div>
-    <div class="col-span-2 ..."><a href="./build/lingucidity.html">Lingucidity</a></div>
-    <div class="..."><a href="./build/kirby3js.html">Kirby3JS</a></div>
-    <div class="..."><a href="./build/musicPortfolio.html">Music Portfolio</a></div>
-    <div class="col-span-2 ..."><a href="./build/emptyfornow.html">Under Construction</a></div>
-  </div>    
+  <div class="bg-slate-900" id="top-navigation">
+    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
+      <div class="p-12" id="desc-text">
+        <h1 class="text-white text-3xl font-bold mb-4">
+          Main Page :)
+        </h1>
+        <h2 class="text-white text-lg">Hi! I am Daniel Kim as a <span class="text-yellow-300" id="typing"></span></h3>
+      </div>
+      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center" id="dotlottie-player">
+        <!-- Transparent placeholder image to keep navbar height constant -->
+        <img src="./build/assets/images/transparent.png" alt="placeholder" style="width: 150px; height: 150px;">
+        <dotlottie-player id="player1" src="https://lottie.host/a79c4a4d-23e1-4608-abdc-7cf152bd61e4/o7FtrcFbSw.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+        <dotlottie-player id="player2" src="https://lottie.host/ff849e35-1c64-41fa-971c-43dff3514dbc/NQuKk3g9UQ.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+        <dotlottie-player id="player3" src="https://lottie.host/a0722147-3021-4a75-bf27-09ffbeb499ce/p8S9RHey27.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+        <dotlottie-player id="player4" src="https://lottie.host/9e0aca34-b3c9-4218-ab17-8bf5577e0af2/13Rpm4LwKw.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-3 m-4" id="navbar">
+    <div class="bg-[#FFF7FC] shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] hover:bg-[#FFD1DA] transition ease-in-out align-middle justify-self-center m-4 p-8 rounded-3xl ..."><a href="./build/about.html">About</a></div>
+    <div class="bg-[#FFF7FC] shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] hover:bg-[#FFD1DA] transition ease-in-out align-middle justify-self-center m-4 p-8 rounded-3xl ..."><a href="./build/projects.html">Projects</a></div>
+    <div class="bg-[#FFF7FC] shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] hover:bg-[#FFD1DA] transition ease-in-out align-middle justify-self-center m-4 p-8 rounded-3xl ..."><a href="./build/cv.html">CV</a></div>
+  </div>
+  <div id="bottom-bar">
+    <div class="fixed block w-full bg-slate-900 bottom-0">
+      <div class="flex justify-center align-middle" id="icon-container">
+        <div class="flex bg-[#e6e9f3] shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)] p-4 m-4 justify-center align-middle rounded-full" id="social-icons">
+          <a class="align-middle ml-3 mr-3 hover:text-slate-400" href="https://github.com/Cobblestone5517/">
+            <i class="fa-brands fa-github-alt" style="font-size:36px"></i>
+          </a>
+          <a class="align-middle ml-3 mr-3 hover:text-slate-400" href="https://www.linkedin.com/in/daniel-kim-052102245/">
+            <i class="fa-brands fa-linkedin" style="font-size:36px"></i>
+          </a>
+          <a class="align-middle ml-3 mr-3 hover:text-slate-400" href="https://handsomeuni5517.notion.site/Daniel-Kim-46293857b12b4a9bab0607e147e5257d?pvs=74">
+            <i class="fa-solid fa-address-card" style="font-size:36px"></i>
+          </a>
+          <div id="copy" class="tooltip align-middle ml-3 mr-3 hover:text-slate-400">
+            <span class="tooltiptext">Click to copy email</span>
+            <i class="fa-regular fa-envelope" style="font-size:36px"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let typed = new Typed('#typing', {
+      strings: ['Software Developer', 'Frontend Developer', 'Student AI Researcher', 'Musician'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 3000,
+      loop: true,
+      preStringTyped: function(pos, self) {
+        setTimeout(() => {
+          showCorrespondingPlayer(self.strings[pos]);
+        }, 0);
+      }
+    });
+  
+    document.querySelector("#copy").addEventListener("click", function(){
+      let textToCopy = document.createElement('textarea');
+      textToCopy.value = 'kjy11gold@gmail.com';  
+      document.body.appendChild(textToCopy);
+  
+      textToCopy.select();
+      textToCopy.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+      document.body.removeChild(textToCopy);
+    });
+  
+    // Function to show the corresponding player based on the displayed text
+    function showCorrespondingPlayer(text) {
+      let players = document.querySelectorAll("dotlottie-player");
+  
+      let playerToShow;
+      if (text === 'Software Developer') {
+        playerToShow = document.getElementById('player1');
+      } else if (text === 'Frontend Developer') {
+        playerToShow = document.getElementById('player2');
+      } else if (text === 'Student AI Researcher') {
+        playerToShow = document.getElementById('player3');
+      } else if (text === 'Musician') {
+        playerToShow = document.getElementById('player4');
+      }
+  
+      // Fade out all players first
+      players.forEach((player) => {
+        if (player !== playerToShow) {
+          player.style.opacity = "0"; // Fade out the other players
+          setTimeout(() => {
+            player.style.display = "none";
+          }, 1000);
+        }
+      });
+  
+      // After the fade-out duration, fade in the correct player
+      setTimeout(() => {
+        playerToShow.style.display = "block";
+        setTimeout(() => {
+          playerToShow.style.opacity = "1"; // Fade in the selected player
+        }, 0); // Short delay to allow the display change before starting fade-in
+      }, 1000); // Wait for the fade-out to complete before starting fade-in
+    }
+  
+    // Initially, make the first player visible
+    function initializePlayers() {
+      let players = document.querySelectorAll("dotlottie-player");
+      players.forEach((player, index) => {
+        player.style.transition = "opacity 1s ease-in-out";
+        if (index === 0) {
+          player.style.display = "block";
+          player.style.opacity = "1"; // Make the first player visible immediately
+        } else {
+          player.style.display = "none";
+          player.style.opacity = "0"; // Ensure others are hidden
+        }
+      });
+    }
+  
+    // Initialize players on page load
+    initializePlayers();
+  
+  </script>
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 140px;
+      background-color: #68D2E8;
+      color: #FEFAF6;
+      text-align: center;
+      border-radius: 8px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: small;
+    }
+
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #68D2E8 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </body>
 </html>
