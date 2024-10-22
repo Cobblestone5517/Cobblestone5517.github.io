@@ -13,11 +13,17 @@
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-col ml-32 mr-32" id="navbar-elements">
+    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
       <div class="p-12" id="desc-text">
         <h1 class="text-white text-3xl font-bold mb-4">
           Music Portfolio :)
         </h1>
+      </div>
+      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
+        <a class="text-slate-300" target="_blank" rel="noopener noreferrer"
+          href="https://www.sellbuymusic.com/search/bgm?pageNo=1&srchKeyword=SOyasOuLiA%3D%3D">
+          <img src="../assets/musicPortfolio/image/sellbuymusiclogo.png" style="width:36px"/>
+        </a>
       </div>
     </div>
   </div>
@@ -135,12 +141,12 @@
 
   <script>
     // Script to pause all other audio when one audio is playing
-    document.addEventListener('play', function(event){  
-      let audios = document.getElementsByTagName('audio');  
-      for(let i = 0, len = audios.length; i < len;i++){  
-        if(audios[i] != event.target){  
-            audios[i].pause();  
-        }  
+    document.addEventListener('play', function(event){
+      let audios = document.getElementsByTagName('audio');
+      for(let i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != event.target){
+            audios[i].pause();
+        }
       }
     }, true);
   </script>
