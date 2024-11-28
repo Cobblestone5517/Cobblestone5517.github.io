@@ -16,7 +16,7 @@
   <header class="bg-slate-900" id="top-navigation">
     <div class="flex flex-col ml-32 mr-32" id="navbar-elements">
       <div class="p-12" id="desc-text">
-        <h1 class="text-white text-3xl font-bold mb-4">
+        <h1 id="title" class="text-white text-3xl font-bold mb-4">
           Project Atrium
         </h1>
       </div>
@@ -25,13 +25,13 @@
   </header>
 
   <!-- TODO: Create a filter (by types of project - AI, Software Dev, Music, etc.) -->
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mr-24 ml-24 mb-32" id="projects-container">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mr-24 ml-24 mb-32" id="projects-container">
     <div class="flex justify-center m-12 mt-16" title="✨ AI Writing Tool ✨"><a class="flex items-center" href="./projects/aiwritingtool.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105 bg-gray-300" src="assets/aiwriter/image/icon.png"/></a></div>
     <div class="flex justify-center m-12 mt-16" title="✨ AI Revision Classification ✨"><a class="flex items-center" href="./projects/revisionClassification.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/revclass/image/icon.png"/></a></div>
     <div class="flex justify-center m-12 mt-16" title="✨ AI Object Detection ✨"><a class="flex items-center" href="./projects/calvinHacks2024.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/objectDetection/image/icon.png"/></a></div>
     <div class="flex justify-center m-12 mt-16" title="✨ Language Learning App ✨"><a class="flex items-center" href="./projects/lingucidity.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/lingucidity/image/icon.png"/></a></div>
     <div class="flex justify-center m-12 mt-16" title="🎮 Kirby.3JS 🎮"><a class="flex items-center" href="./projects/kirby3js.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/kirby3js/image/icon.png"/></a></div>
-    <div class="flex justify-center m-12 mt-16" title="🎹 Music Production 🎹"><a class="flex items-center" href="./projects/musicPortfolio.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/musicPortfolio/image/icon.png"/></a></div>
+    <div class="flex justify-center m-12 mt-16" title="🎹 Music Production 🎹"><a class="flex items-center" href="./projects/musicPortfolio.html"><img class="border-solid border-4 border-amber-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/musicPortfolio/image/icon.png"/></a></div>
     <!-- <div class="flex justify-center m-12 mt-16" title="🚧 Under Construction 🚧"><a class="flex items-center" href="./projects/emptyfornow.html"><img class="border-solid border-4 border-slate-100 transition ease-in-out rounded-3xl object-scale-down min-h-36 min-w-36 max-h-56 max-w-56 shadow-[0.625rem_0.625rem_0.875rem_0_rgb(225,226,228),-0.5rem_-0.5rem_1.125rem_0_rgb(255,255,255)] grayscale-[25%] hover:grayscale-0 hover:shadow-none hover:scale-105" src="assets/images/tempIcon.png"/></a></div> -->
   </div>
 
@@ -112,6 +112,13 @@
 
     .tooltiptext::after {
       content: "";
+    }
+
+    #title {
+      background: linear-gradient(to right, #87ddb2, #8dcef3);
+      background-clip: text;
+      color: transparent;
+      transition: all 0.5s;
     }
   </style>
 </body>

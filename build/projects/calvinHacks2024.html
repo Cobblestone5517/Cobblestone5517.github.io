@@ -10,13 +10,14 @@
   <!-- Use cdn if failed to load css file -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <link href="./css/main.css" rel="stylesheet"> -->
+  <title>Object Detection</title>
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
     <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
       <div class="p-12" id="desc-text">
-        <h1 class="text-white text-3xl font-bold mb-4">
-          Object Detection :)
+        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+          Object Detection
         </h1>
       </div>
       <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
@@ -29,6 +30,125 @@
       </div>
     </div>
   </div>
+
+  <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light mb-2">
+          This project tackles the task of object detection in large images. In particular, we worked towards developing a
+          workflow to detect objects in a ~ 37000 x 30000 RGBa TIFF image.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light">
+          Professor Haan from Calvin University's Engineering Department worked with one of our team members, Aryan, last summer
+          to better leverage the hazard assessment/survey data that is available to researchers online. They successfully
+          developed a prototype to work with Streetview images, but there was no such workflow for drone images. Thus, we took
+          the challenge of simplifying object detection for drone images. For this hackathon, we made cars/damaged cars our object
+          of interest.
+        </p>
+        <img class="rounded-2xl h-40" src="../assets/objectDetection/image/droneImage.png" alt="Example of large drone image" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
+      <div class="flex flex-row gap-12">
+        <img class="rounded-2xl h-48" src="../assets/objectDetection/image/example.png" alt="Example of object detection" />
+        <div class="flex flex-col">
+          <p class="font-normal">
+            Our project has more of a research-oriented nature. It does the following things:
+          </p>
+          <ul class="font-light mt-2">
+            <li class="inline-block bg-zinc-100 p-2 pl-4 pr-4 rounded-3xl font-light mb-2">
+              Provide code to split large images into smaller square images, and later merge them back together.</li>
+            <li class="inline-block bg-zinc-100 p-2 pl-4 pr-4 rounded-3xl font-light mb-2">
+              Trains state-of-the-art object detection models on datasets of drone images to detect cars in drone images.</li>
+            <li class="inline-block bg-zinc-100 p-2 pl-4 pr-4 rounded-3xl font-light mb-2">
+              Documents the challenges and potential things that work (and do not work) in dealing with very large image files (one
+              image can be gigabytes).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light">
+          We built it using Python and Jupyter Notebooks. We extensively used numpy to manipulate the images. We used the
+          ultralytics library to train YOLO v8 and RT-DETR models, and used a Google Colab notebook provided by Roboflow to train
+          Facebook's Detection Transformer and compare the models.
+        </p>
+        <img class="rounded-2xl h-48" src="../assets/objectDetection/image/models.png" alt="models" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Accomplishments</h2>
+      <div class="flex flex-row gap-12">
+        <img class="rounded-2xl h-56" src="../assets/objectDetection/image/graph.png" alt="graph" />
+        <p class="font-light">
+          We were successfully able to load the 1.6 GB TIFF image into a numpy array and split it into smaller equal sized chunks.
+          We also figured out a way to merge the split images back into the original form using simple numpy array manipulation,
+          given we have enough memory to load all the split chunks.
+          We trained a RT-DETR model to see decent results on the very distorted dataset of split drone images.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What's Next</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light">
+          Figuring out how to efficiently recombine the split images with predictions back into the original size. Handle
+          carefully the Geographic data that GeoTIFF images contain to keep the geo-referencing benefits that come with such
+          images.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="flex gap-4 flex-wrap">
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Artificial Intelligence</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          ML/DL</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          gdal</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          DesignSafe</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Numpy</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Python</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Jupyter Notebook</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Object Detection</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          rasterio</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          ultralytics</li>
+      </ul>
+    </section>
+  </article>
 
   <!-- TO DO: Use template/reusable component for bottom bar -->
   <!-- https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/ -->
@@ -99,6 +219,13 @@
     .tooltip:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
+    }
+
+    #title {
+      background: linear-gradient(to right, #87ddb2, #8dcef3);
+      background-clip: text;
+      color: transparent;
+      transition: all 0.5s;
     }
   </style>
 </body>

@@ -10,13 +10,14 @@
   <!-- Use cdn if failed to load css file -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <link href="./css/main.css" rel="stylesheet"> -->
+  <title>Music Portfolio</title>
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
     <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
       <div class="p-12" id="desc-text">
-        <h1 class="text-white text-3xl font-bold mb-4">
-          Music Portfolio :)
+        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+          Music Portfolio
         </h1>
       </div>
       <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
@@ -28,7 +29,17 @@
     </div>
   </div>
 
-  <div id="music-container" class="flex flex-col ml-4 mr-4 align-middle justify-center items-center">
+  <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-12 ml-4 mr-4">
+    <section class="mb-4">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Welcome to my Music Portfolio</h2>
+      <div class="flex flex-row ml-4 mr-4">
+        <p class="font-light">As a music enthusiast, I have been producing music over the years, in various genres.
+          I use Logic Pro as a main DAW, but am capable of using Cubase as well as FL Studio</p>
+      </div>
+    </section>
+  </article>
+
+  <article id="music-container" class="flex flex-col ml-4 mr-4 align-middle justify-center items-center">
     <section class="mt-12">
       <h2 class="font-bold text-lg bg-green-50">☘️ Background Music (BGM)</h2>
       <div>
@@ -109,7 +120,7 @@
         <audio style="width:75vw" class="max-w-screen-md" src="../assets/musicPortfolio/music/NewJackSwing_Demo.mp3" controlsList="nodownload" controls></audio></audio>
       </div>
     </section>
-  </div>
+  </article>
 
   <!-- TO DO: Use template/reusable component for bottom bar -->
   <!-- https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/ -->
@@ -201,6 +212,13 @@
     .tooltip:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
+    }
+
+    #title {
+      background: linear-gradient(to right, #f88570, #d8e068);
+      background-clip: text;
+      color: transparent;
+      transition: all 0.5s;
     }
   </style>
 </body>

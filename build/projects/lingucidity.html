@@ -10,13 +10,14 @@
   <!-- Use cdn if failed to load css file -->
   <!-- <link href="./css/main.css" rel="stylesheet"> -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>Language Learning App</title>
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
     <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
       <div class="p-12" id="desc-text">
-        <h1 class="text-white text-3xl font-bold mb-4">
-          Lingucidity :)
+        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+          Lingucidity
         </h1>
       </div>
       <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center">
@@ -26,8 +27,95 @@
       </div>
     </div>
   </div>
-  <h1 class="text-3xl font-bold">
-  
+
+  <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light mb-2">
+          A Lucid In-Context Approach to Linguistic Activity
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light">
+          Lingucidity is a language-oriented utility application that emphasizes interactions over rote study. While language apps
+          like Duolingo target long-term learners with a range of exercises too broad to apply to one’s immediate circumstances,
+          Lingucidity, a portmanteau of “linguistic” and “lucidity,” better addresses the short-term needs of international
+          travel.
+        </p>
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/login.png" alt="Login page" />
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/signup1.png" alt="Signup page" />
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/signup3.png" alt="Signup page" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
+      <div class="flex flex-row gap-12">
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/wordcard.png" alt="Wordcard page" />
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/dict.png" alt="Dictionary page" />
+        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/translate1.png" alt="Translate page" />
+        <p class="font-light">
+          By providing lists of topically-organized, LLM-generated words and phrases in the target language adapted to the
+          environmental, colloquial, and personal circumstances the user provides, Lingucidity allows users to better apply the
+          language to their immediate needs as international travelers.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
+      <div class="flex flex-row gap-12">
+        <p class="font-light">
+          To further facilitate such linguistic connections, Lingucidity also integrates the Wordreference dictionary into its
+          translation output so users can gain insight into how individual words and phrases are conjugated and translated, which
+          provides more opportunities for inter-linguistic engagement than traditional translators like Google Translate.
+        </p>
+        <img class="rounded-2xl h-48" src="../assets/lingucidity/image/techstack.png" alt="Tech Stack" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="flex gap-4 flex-wrap">
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Artificial Intelligence</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          React Native/Expo</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          JavaScript</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Python</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          CRUD</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          REST API</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          PostgreSQL</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Azure SaaS</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Usability Testing</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          Agile/Kanban</li>
+      </ul>
+    </section>
+  </article>
+
   <!-- TO DO: Use template/reusable component for bottom bar -->
   <!-- https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/ -->
   <div id="bottom-bar">
@@ -97,6 +185,13 @@
     .tooltip:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
+    }
+
+    #title {
+      background: linear-gradient(to right, #87ddb2, #8dcef3);
+      background-clip: text;
+      color: transparent;
+      transition: all 0.5s;
     }
   </style>
 </body>
