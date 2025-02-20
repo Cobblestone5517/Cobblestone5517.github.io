@@ -15,13 +15,13 @@
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
-      <div class="p-12" id="desc-text">
-        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+    <div class="flex flex-col sm:flex-row" id="navbar-elements">
+      <div class="p-8 sm:p-12" id="desc-text">
+        <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
           Lingucidity
         </h1>
       </div>
-      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center">
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center">
         <a class="text-slate-300" target="_blank" rel="noopener noreferrer" href="https://github.com/Team-Equipo/project">
           <i class="fa-brands fa-github-alt" style="font-size:36px"></i>
         </a>
@@ -31,36 +31,36 @@
 
   <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
       <div class="flex flex-row gap-12">
-        <p class="font-light mb-2">
+        <p class="text-sm sm:text-base font-light mb-2">
           A Lucid In-Context Approach to Linguistic Activity
         </p>
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
-      <div class="flex flex-row gap-12">
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <p class="text-sm sm:text-base font-light">
           Lingucidity is a language-oriented utility application that emphasizes interactions over rote study. While language apps
           like Duolingo target long-term learners with a range of exercises too broad to apply to one’s immediate circumstances,
           Lingucidity, a portmanteau of “linguistic” and “lucidity,” better addresses the short-term needs of international
           travel.
         </p>
-        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/login.png" alt="Login page" />
-        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/signup1.png" alt="Signup page" />
+        <img class="rounded-md h-64 object-contain hide-on-mobile" src="../assets/lingucidity/image/login.png" alt="Login page" />
+        <img class="rounded-md h-64 object-contain hide-on-mobile" src="../assets/lingucidity/image/signup1.png" alt="Signup page" />
         <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/signup3.png" alt="Signup page" />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
-      <div class="flex flex-row gap-12">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
         <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/wordcard.png" alt="Wordcard page" />
-        <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/dict.png" alt="Dictionary page" />
+        <img class="rounded-md h-64 object-contain hide-on-mobile" src="../assets/lingucidity/image/dict.png" alt="Dictionary page" />
         <img class="rounded-md h-64 object-contain" src="../assets/lingucidity/image/translate1.png" alt="Translate page" />
-        <p class="font-light">
+        <p class="text-sm sm:text-base font-light">
           By providing lists of topically-organized, LLM-generated words and phrases in the target language adapted to the
           environmental, colloquial, and personal circumstances the user provides, Lingucidity allows users to better apply the
           language to their immediate needs as international travelers.
@@ -69,9 +69,9 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
-      <div class="flex flex-row gap-12">
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <p class="text-sm sm:text-base font-light">
           To further facilitate such linguistic connections, Lingucidity also integrates the Wordreference dictionary into its
           translation output so users can gain insight into how individual words and phrases are conjugated and translated, which
           provides more opportunities for inter-linguistic engagement than traditional translators like Google Translate.
@@ -81,8 +81,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="flex gap-4 flex-wrap">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="flex gap-4 flex-wrap text-sm sm:text-base">
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
           Artificial Intelligence</li>
@@ -193,6 +193,12 @@
       background-clip: text;
       color: transparent;
       transition: all 0.5s;
+    }
+
+    @media (max-width: 640px) {
+      .hide-on-mobile {
+        display: none;
+      }
     }
   </style>
 </body>

@@ -16,13 +16,13 @@
 
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
-      <div class="p-12" id="desc-text">
-        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+    <div class="flex flex-col sm:flex-row" id="navbar-elements">
+      <div class="p-8 sm:p-12" id="desc-text">
+        <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
           Promoting End-to-End Intentionality with Large Language Models
         </h1>
       </div>
-      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-2">
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-2">
         <a class="text-slate-300 ml-2 mr-2" target="_blank" rel="noopener noreferrer"
           href="https://github.com/AIToolsLab/writing-tools">
           <i class="fa-brands fa-github-alt" style="font-size:36px"></i>
@@ -40,13 +40,13 @@
 
   <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Introduction</h2>
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Introduction</h2>
       <div class="flex flex-col">
-        <p class="font-light mb-2">
+        <p class="font-light mb-2 text-sm sm:text-base">
           Large Language Models, such as ChatGPT or Claude.ai, are applied to many writing tasks and seem like a “magic tool” due
           to advanced reasoning capabilities, but there isn’t much variety in the interfaces used to request their outputs.
         </p>
-        <p class="font-light mb-2">
+        <p class="font-light mb-2 text-sm sm:text-base">
           The typical “chat” interface often provides a single, seemingly final answer, which can make users overestimate LLM
           capabilities and assume its answer is the “best” answer. But we don’t know what really “goes into” an LLM’s training, so we want to help users become more aware of possible
           limitations.
@@ -55,13 +55,13 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Approaches</h2>
-      <div class="flex flex-row gap-12 mb-8">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Approaches</h2>
+      <div class="flex flex-col sm:flex-row gap-12 mb-8">
         <div class="flex-row">
-          <p class="font-light mb-4">
+          <p class="font-light mb-4 text-sm sm:text-base">
             We developed a Microsoft Word sidebar that offered next-sentence suggestions expressed in four different ways:
           </p>
-          <ul class="font-light ml-2">
+          <ul class="font-light ml-2 text-sm sm:text-base">
             <li class="mb-2"><strong>Completion of a current thought:</strong> Provides a pre-written single sentence</li>
             <li class="mb-2"><strong>A question about current/future writing:</strong> A question the writer could answer in the next sentence</li>
             <li class="mb-2"><strong>A list of possible vocabulary:</strong> to use in the next sentence</li>
@@ -79,8 +79,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Summary</h2>
-      <p class="font-light mb-4">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Summary</h2>
+      <p class="font-light mb-4 text-sm sm:text-base">
         In a pilot study (N=9), writers found questions and rhetorical moves to be useful and friendly. Multiple participants
         found that the suggestions helped overcome “writer’s block” and characterized the tool as
         conversational or collaborative. Although writers chose to request "Completion" more often, they often rejected the
@@ -89,25 +89,25 @@
         suggestion types. Dissonance between conscious desire for originality and subconscious desire to minimize cognitive
         load.
       </p>
-      <p class="font-light mb-4">
+      <p class="font-light mb-4 text-sm sm:text-base">
         Overall, non-Completion type suggestions seem to hold the most promise in assisting—but not replacing—users’ writing;
         completions did help with writer’s block when it was aligned with what users wanted to say, but also sometimes induced
         writers’ block when suggesting ideas that weren’t aligned. This demonstrates the potential for more open-ended
         suggestions to fill this gap.
       </p>
-      <p class="font-light mb-4">
+      <p class="font-light mb-4 text-sm sm:text-base">
         Multiple participants rejected more at the beginning then noticed the LLM got a better sense of what they were going for
         later on, suggesting they were cognitively engaged in evaluating the appropriateness of LLM outputs.
       </p>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Authors</h2>
-      <p class="mb-2 font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Authors</h2>
+      <p class="mb-2 font-light text-sm sm:text-base">
         <a class="text-cyan-600 transition-all duration-300 hover:text-green-600" href="https://kenarnold.org/pubs/cognitive-engagement/poster-summer2024.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
         presented at 2024 Calvin University Summer Research Poster Fair, Published: October 25, 2024
       </p>
-      <div class="flex flex-row gap-8">
+      <div class="flex flex-row gap-2 sm:gap-8 text-sm sm:text-base">
         <p>Jason Chew</p>
         <p>Daniel Kim</p>
         <p>Jiho Kim</p>
@@ -118,8 +118,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="flex gap-4 flex-wrap">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="flex gap-4 flex-wrap text-sm sm:text-base">
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
           Artificial Intelligence</li>

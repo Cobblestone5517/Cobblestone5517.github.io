@@ -16,13 +16,13 @@
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
-      <div class="p-12" id="desc-text">
-        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+    <div class="flex flex-col sm:flex-row" id="navbar-elements">
+      <div class="p-8 sm:p-12" id="desc-text">
+        <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
           Kirby.3JS
         </h1>
       </div>
-      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center">
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center">
         <a class="text-slate-300 ml-2 mr-2" target="_blank" rel="noopener noreferrer" href="https://github.com/CS372Juego/Kirby.3JS">
           <i class="fa-brands fa-github-alt" style="font-size:36px"></i>
         </a>
@@ -35,36 +35,36 @@
 
   <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
-      <div class="flex flex-row gap-12 mb-24">
-        <img class="rounded-2xl h-40" src="../assets/kirby3js/image/threejs.jpg" alt="Kirby.3JS" />
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
+      <div class="flex flex-col sm:flex-row gap-12 mb-24">
+        <img class="rounded-2xl h-40 object-contain" src="../assets/kirby3js/image/threejs.jpg" alt="Kirby.3JS" />
         <div class="flex flex-col">
-          <p class="font-light mb-2">
+          <p class="text-sm sm:text-base font-light mb-2">
             Kirby3JS is a web-based 3D platformer where the player controls <a>Kirby</a> as he navigates through a series of levels.
             The goal of the game is to get a star at the end of the world while avoiding obstacles and enemies.
           </p>
-          <p class="font-light">
+          <p class="text-sm sm:text-base font-light">
             This was developed as a team project for CS372: Computer Graphics at Calvin University.
             The game was developed using <a>THREE.js</a>, a popular 3D library for the web.
           </p>
         </div>
       </div>
 
-      <div class="flex flex-row gap-12">
-        <p class="font-light">
+      <div class="flex flex-col sm:flex-row gap-12">
+        <p class="text-sm sm:text-base font-light">
           The game provides controls for the player to move Kirby left, right, and jump, via keyboard controls.
           A full instruction can be toggled on and off by pressing "esc" key.
         </p>
-        <img class="rounded-2xl h-40" src="../assets/kirby3js/image/gp1.png" alt="Kirby.3JS" />
-        <img class="rounded-2xl h-40" src="../assets/kirby3js/image/gp2.png" alt="Kirby.3JS" />
+        <img class="rounded-2xl h-40 object-contain" src="../assets/kirby3js/image/gp1.png" alt="Kirby.3JS" />
+        <img class="rounded-2xl h-40 object-contain" src="../assets/kirby3js/image/gp2.png" alt="Kirby.3JS" />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">In the Future</h2>
-      <div class="flex flex-row gap-12">
-        <img class="rounded-2xl h-40" src="../assets/kirby3js/image/gp3.png" alt="Kirby.3JS" />
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">In the Future</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <img class="rounded-2xl h-40 object-contain" src="../assets/kirby3js/image/gp3.png" alt="Kirby.3JS" />
+        <p class="text-sm sm:text-base font-light">
           Since the game was developed just in a couple of weeks, there are some bugs and limitations, that could be improved
           in the future.
           In the future, we could improve the gameplay experience by adding more levels, obstacles, and enemies to make the
@@ -75,8 +75,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="flex gap-4 flex-wrap">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="flex gap-4 flex-wrap text-sm sm:text-base">
         <li class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">HTML</li>
         <li class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">CSS</li>
         <li class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">JavaScript</li>

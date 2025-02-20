@@ -15,13 +15,13 @@
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
-      <div class="p-12" id="desc-text">
-        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+    <div class="flex flex-col sm:flex-row" id="navbar-elements">
+      <div class="p-8 sm:p-12" id="desc-text">
+        <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
           Modelling Revision Classification
         </h1>
       </div>
-      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
         <a class="text-slate-300" target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/code/nghtctrl/modeling-revision-classification">
           <i class="fa-brands fa-kaggle" style="font-size:36px"></i>
         </a>
@@ -34,15 +34,15 @@
 
   <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Introduction</h2>
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Introduction</h2>
       <div class="flex flex-col">
-        <p class="font-light mb-2">
+        <p class="text-sm sm:text-base font-light mb-2">
           In the writing process, effective textual revisions typically result in expansive alterations to the semantic content of
           a text, as opposed to prescriptive alterations like proofreading; however, novice writers often tend to favor the latter
           (Flower et. al 1986). Therefore, the identification of major semantic alterations in the revisions of student writers
           could be used to benchmark their progress towards more effective revision.
         </p>
-        <p class="font-light mb-2">
+        <p class="text-sm sm:text-base font-light mb-2">
           To this end, the following report analyzes various applications of language models towards revision evaluation, which is
           in this case framed as a binary classification task for identifying revisions as “content” (substantive) or “surface”
           (superficial) revisions.
@@ -51,16 +51,16 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Project Objectives and Approaches</h2>
-      <div class="flex flex-row gap-12">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Project Objectives and Approaches</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
         <div class="flex-col">
-          <p class="font-light mb-4">
+          <p class="text-sm sm:text-base font-light mb-4">
             <strong>Completion prompting:</strong> when given a “fill-in-the-blank” classification prompt like “...the revision is _”, a language
             model can implicitly make predictions thanks to the logprobs, or “likelihoods,” it computes for each of the two possible
             classification terms (“substantive” and “superficial”). Once the model computes these likelihoods, they may be compared
             with one another to make the classification.
           </p>
-          <p class="font-light">
+          <p class="text-sm sm:text-base font-light">
             <strong>Similarity scores:</strong> a language model can compute abstract representations (embeddings) of an original and revised text
             based on their semantic content, and the similarity of those semantic embeddings can be used as a measure of how little
             a revision changed the “content” of a sentence; these similarities can then be used to predict whether a revision alters
@@ -72,22 +72,22 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Summary of Results</h2>
-      <p class="font-light mb-4">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Summary of Results</h2>
+      <p class="text-sm sm:text-base font-light mb-4">
         When using completion prompting, performance on the task somewhat improved after preprending contextual information to
         the prompts, such as example classifications and definitions of the terms.
       </p>
-      <p class="font-light mb-4">
+      <p class="text-sm sm:text-base font-light mb-4">
         When switching the model used from GPT-2 to GEMMA, performance on the baseline prompt dropped to worse than random
         classification, demonstrating that prompts may not work equally well across different models with different
         tokenization
         schemes.
       </p>
-      <p class="font-light mb-4">
+      <p class="text-sm sm:text-base font-light mb-4">
         When using similarity scores, performance on the task improved significantly from even the best-performing completion
         approach. It was also much more computationally efficient, as the model was not required to generate completions.
       </p>
-      <div class="flex flex-row gap-12 justify-center">
+      <div class="flex flex-col sm:flex-row gap-12 justify-center items-center">
         <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/baseLine.png" alt="Baseline Result" title="Baseline Result" />
         <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/fewShot.png" alt="Few-shot Result" title="Few-shot Result"/>
         <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/sentenceTransformer.png" alt="Sentence Transformer Result" title="Sentence Transformer Result"/>
@@ -95,8 +95,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="flex gap-4 flex-wrap">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="text-sm sm:text-base flex gap-4 flex-wrap">
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
           Artificial Intelligence</li>

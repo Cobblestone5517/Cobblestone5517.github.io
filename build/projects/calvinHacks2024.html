@@ -15,13 +15,13 @@
 </head>
 <body>
   <div class="bg-slate-900" id="top-navigation">
-    <div class="flex flex-row ml-32 mr-32" id="navbar-elements">
-      <div class="p-12" id="desc-text">
-        <h1 id="title" class="text-white text-3xl font-bold mb-4">
+    <div class="flex flex-col sm:flex-row" id="navbar-elements">
+      <div class="p-8 sm:p-12" id="desc-text">
+        <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
           Object Detection
         </h1>
       </div>
-      <div class="p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
         <a class="text-slate-300" target="_blank" rel="noopener noreferrer" href="https://devpost.com/software/w-asd">
           <i class="fa-solid fa-d" style="font-size:36px"></i>
         </a>
@@ -34,9 +34,9 @@
 
   <article class="max-w-5xl flex justify-center justify-self-center flex-col mt-16 mb-40 ml-4 mr-4">
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Overview</h2>
       <div class="flex flex-row gap-12">
-        <p class="font-light mb-2">
+        <p class="text-sm sm:text-base font-light mb-2">
           This project tackles the task of object detection in large images. In particular, we worked towards developing a
           workflow to detect objects in a ~ 37000 x 30000 RGBa TIFF image.
         </p>
@@ -44,28 +44,28 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
-      <div class="flex flex-row gap-12">
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Inspirations</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <p class="text-sm sm:text-base font-light">
           Professor Haan from Calvin University's Engineering Department worked with one of our team members, Aryan, last summer
           to better leverage the hazard assessment/survey data that is available to researchers online. They successfully
           developed a prototype to work with Streetview images, but there was no such workflow for drone images. Thus, we took
           the challenge of simplifying object detection for drone images. For this hackathon, we made cars/damaged cars our object
           of interest.
         </p>
-        <img class="rounded-2xl h-40" src="../assets/objectDetection/image/droneImage.png" alt="Example of large drone image" />
+        <img class="rounded-2xl h-40 object-contain" src="../assets/objectDetection/image/droneImage.png" alt="Example of large drone image" />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
-      <div class="flex flex-row gap-12">
-        <img class="rounded-2xl h-48" src="../assets/objectDetection/image/example.png" alt="Example of object detection" />
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">What it does</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <img class="rounded-2xl h-48 object-contain" src="../assets/objectDetection/image/example.png" alt="Example of object detection" />
         <div class="flex flex-col">
-          <p class="font-normal">
+          <p class="text-sm sm:text-base font-normal">
             Our project has more of a research-oriented nature. It does the following things:
           </p>
-          <ul class="font-light mt-2">
+          <ul class="text-sm sm:text-base font-light mt-2">
             <li class="inline-block bg-zinc-100 p-2 pl-4 pr-4 rounded-3xl font-light mb-2">
               Provide code to split large images into smaller square images, and later merge them back together.</li>
             <li class="inline-block bg-zinc-100 p-2 pl-4 pr-4 rounded-3xl font-light mb-2">
@@ -79,22 +79,22 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
-      <div class="flex flex-row gap-12">
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">How we built it</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <p class="text-sm sm:text-base font-light">
           We built it using Python and Jupyter Notebooks. We extensively used numpy to manipulate the images. We used the
           ultralytics library to train YOLO v8 and RT-DETR models, and used a Google Colab notebook provided by Roboflow to train
           Facebook's Detection Transformer and compare the models.
         </p>
-        <img class="rounded-2xl h-48" src="../assets/objectDetection/image/models.png" alt="models" />
+        <img class="rounded-2xl h-48 object-contain" src="../assets/objectDetection/image/models.png" alt="models" />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Accomplishments</h2>
-      <div class="flex flex-row gap-12">
-        <img class="rounded-2xl h-56" src="../assets/objectDetection/image/graph.png" alt="graph" />
-        <p class="font-light">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Accomplishments</h2>
+      <div class="flex flex-col sm:flex-row gap-12">
+        <img class="rounded-2xl h-56 object-contain" src="../assets/objectDetection/image/graph.png" alt="graph" />
+        <p class="text-sm sm:text-base font-light">
           We were successfully able to load the 1.6 GB TIFF image into a numpy array and split it into smaller equal sized chunks.
           We also figured out a way to merge the split images back into the original form using simple numpy array manipulation,
           given we have enough memory to load all the split chunks.
@@ -104,9 +104,9 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">What's Next</h2>
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">What's Next</h2>
       <div class="flex flex-row gap-12">
-        <p class="font-light">
+        <p class="text-sm sm:text-base font-light">
           Figuring out how to efficiently recombine the split images with predictions back into the original size. Handle
           carefully the Geographic data that GeoTIFF images contain to keep the geo-referencing benefits that come with such
           images.
@@ -115,8 +115,8 @@
     </section>
 
     <section class="mb-16">
-      <h2 class="text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="flex gap-4 flex-wrap">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
+      <ul class="text-sm sm:text-base flex gap-4 flex-wrap">
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
           Artificial Intelligence</li>
