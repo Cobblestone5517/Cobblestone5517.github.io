@@ -474,16 +474,19 @@
     }
 
     #projectpage {
-      background: linear-gradient(to right, #F95454, #006BFF);
+      background: radial-gradient(circle at 50%, #F95454, #006BFF);
+      background-size: 200% auto;
       background-clip: text;
+      -webkit-background-clip: text;
       color: transparent;
-      transition: all 0.5s;
+      transition: all 0.6s;
+      animation: alternateTextColor 4s linear infinite;;
     }
 
-    #projectpage:hover {
-      background: linear-gradient(to right, #006BFF, #F95454);
-      background-clip: text;
-      color: transparent;
+    @keyframes alternateTextColor {
+      to {
+        background-position: 200% center;
+      }
     }
 
     .subtitleWrapper {
