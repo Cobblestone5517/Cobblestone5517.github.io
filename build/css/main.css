@@ -748,8 +748,8 @@ video {
   height: 16rem;
 }
 
-.h-24 {
-  height: 6rem;
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .w-28 {
@@ -762,18 +762,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .max-w-5xl {
@@ -1208,16 +1196,8 @@ video {
     min-height: 9rem;
   }
 
-  .sm\:min-h-28 {
-    min-height: 7rem;
-  }
-
   .sm\:min-w-36 {
     min-width: 9rem;
-  }
-
-  .sm\:min-w-28 {
-    min-width: 7rem;
   }
 
   .sm\:max-w-56 {
@@ -1276,12 +1256,6 @@ video {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:flex-row {
-    flex-direction: row;
   }
 }
 
