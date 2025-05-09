@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../assets/logo_black_outlined.png" />
+  <link rel="icon" href="../assets/emp/emp.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -11,22 +11,25 @@
   
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link href="../css/main.css" rel="stylesheet">
-  <title>Revision Classification</title>
+  <title>EMP</title>
 </head>
+
 <body>
   <div class="bg-slate-900" id="top-navigation">
     <div class="flex flex-col sm:flex-row" id="navbar-elements">
       <div class="p-8 sm:p-12" id="desc-text">
         <h1 id="title" class="text-white text-xl sm:text-3xl font-bold mb-4">
-          Modelling Revision Classification
+          EMP: Environmental Music Player
         </h1>
       </div>
-      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-4">
-        <a class="text-slate-300" target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/code/nghtctrl/modeling-revision-classification">
-          <i class="fa-brands fa-kaggle" style="font-size:36px"></i>
+      <div class="p-8 sm:p-12 right-0 left-full justify-items-end ml-auto flex items-center gap-2">
+        <a class="text-slate-300 ml-2 mr-2" target="_blank" rel="noopener noreferrer"
+          href="https://github.com/CS326MusicPlayer/EMP_UI">
+          <i class="fa-brands fa-github-alt" style="font-size:36px"></i>
         </a>
-        <a class="text-slate-300" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/19TN2kAFAhhNMvG1WZ0GXTUtGR5oRcLdxqpjakboMmqI/edit?usp=sharing">
-          <i class="fa-solid fa-file-powerpoint" style="font-size:36px"></i>
+        <a class="text-slate-300 ml-2 mr-2" target="_blank" rel="noopener noreferrer"
+          href="https://emp-webui.web.app/">
+          <i class="fa-solid fa-tower-broadcast" style="font-size:36px"></i>
         </a>
       </div>
     </div>
@@ -34,93 +37,96 @@
 
   <article class="max-w-5xl flex justify-center flex-col mt-16 mb-40 sm:mx-auto mx-2">
     <section class="mb-16">
-      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Introduction</h2>
-      <div class="flex flex-col">
-        <p class="text-sm sm:text-base font-light mb-2">
-          In the writing process, effective textual revisions typically result in expansive alterations to the semantic content of
-          a text, as opposed to prescriptive alterations like proofreading; however, novice writers often tend to favor the latter
-          (Flower et. al 1986). Therefore, the identification of major semantic alterations in the revisions of student writers
-          could be used to benchmark their progress towards more effective revision.
-        </p>
-        <p class="text-sm sm:text-base font-light mb-2">
-          To this end, the following report analyzes various applications of language models towards revision evaluation, which is
-          in this case framed as a binary classification task for identifying revisions as “content” (substantive) or “surface”
-          (superficial) revisions.
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Project Objectives and Approaches</h2>
-      <div class="flex flex-col sm:flex-row gap-12">
-        <div class="flex-col">
-          <p class="text-sm sm:text-base font-light mb-4">
-            <strong>Completion prompting:</strong> when given a “fill-in-the-blank” classification prompt like “...the revision is _”, a language
-            model can implicitly make predictions thanks to the logprobs, or “likelihoods,” it computes for each of the two possible
-            classification terms (“substantive” and “superficial”). Once the model computes these likelihoods, they may be compared
-            with one another to make the classification.
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Motivation</h2>
+      <div class="flex flex-col sm:flex-row gap-12 mb-8">
+        <div class="flex flex-col">
+          <p class="font-light mb-2 text-sm sm:text-base">
+            Our inspiration for this project was the popular video game Animal Crossing: New Horizons, which plays different musical tracks for different times of day and weather conditions. 
+            We thought that that kind of musical functionality might be nice to have in real life. 
           </p>
-          <p class="text-sm sm:text-base font-light">
-            <strong>Similarity scores:</strong> a language model can compute abstract representations (embeddings) of an original and revised text
-            based on their semantic content, and the similarity of those semantic embeddings can be used as a measure of how little
-            a revision changed the “content” of a sentence; these similarities can then be used to predict whether a revision alters
-            a sentence’s semantic meaning significantly enough to be considered a “content” revision.
+          <p class="font-light mb-2 text-sm sm:text-base">
+            Think of you’re stuck indoors working on homework all day, it can be easy to forget about the external world. 
+            With dynamically adaptive music, we hope to help users maintain a feeling of connection with the great outdoors.
           </p>
         </div>
-        <img class="rounded-md h-64 object-contain" src="../assets/revclass/image/approaches.png" alt="Approaches" />
+        <img class="rounded-md h-64 object-contain" src="../assets/emp/motivation.png" alt="Motivation" />
       </div>
     </section>
 
     <section class="mb-16">
-      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Summary of Results</h2>
-      <p class="text-sm sm:text-base font-light mb-4">
-        When using completion prompting, performance on the task somewhat improved after preprending contextual information to
-        the prompts, such as example classifications and definitions of the terms.
-      </p>
-      <p class="text-sm sm:text-base font-light mb-4">
-        When switching the model used from GPT-2 to GEMMA, performance on the baseline prompt dropped to worse than random
-        classification, demonstrating that prompts may not work equally well across different models with different
-        tokenization
-        schemes.
-      </p>
-      <p class="text-sm sm:text-base font-light mb-4">
-        When using similarity scores, performance on the task improved significantly from even the best-performing completion
-        approach. It was also much more computationally efficient, as the model was not required to generate completions.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-12 justify-center items-center">
-        <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/baseLine.png" alt="Baseline Result" title="Baseline Result" />
-        <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/fewShot.png" alt="Few-shot Result" title="Few-shot Result"/>
-        <img class="rounded-md w-64 object-contain" src="../assets/revclass/image/sentenceTransformer.png" alt="Sentence Transformer Result" title="Sentence Transformer Result"/>
+      <div class="justify-self-center">
+        <img class="rounded-3xl w-2/3 m-auto object-contain" src="../assets/emp/demo.png" alt="Main Interface" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Project Description</h2>
+      <div class="flex flex-col">
+        <p class="font-light mb-2 text-sm sm:text-base">
+          Based on a connected Raspberry Pi’s location, this project adaptively plays different soundtracks depending on the location’s current precipitation, 
+          sunrise/sunset times, lighting conditions, and/or temperature.
+          The music plays in a web frontend, through which the user can also specify what environmental factors should play a role in the tracks played.
+        </p>
+        <p class="font-light mb-2 text-sm sm:text-base">
+          Our system has two base tracks, one for “daytime” and one for “nighttime.” The base tracks are chosen based on time or light level. 
+          Each track has three variations: one for clear weather, one for rainy weather, and one for snowy weather. 
+          The variations are chosen based on local weather conditions or temperature.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Approaches</h2>
+      <div class="flex flex-col sm:flex-row gap-12 mb-8">
+        <div class="flex-row">
+          <p class="font-light mb-4 text-sm sm:text-base">
+            First, our Web UI requests weather and daylight information from a Raspberry Pi with a specified ID. Because the requests are made via MQTT, the user can select any Raspberry Pi at any location. 
+            The Raspberry Pi then uses a geolocation API to approximate its location from its IP address. 
+            Next, the Pi requests information about the weather and daylight for its specific location from a weather API. 
+            Finally, the Pi gets a light reading and temperature reading from its local sensors, before bundling all of that information into a payload that gets sent to the Web UI.
+          </p>
+        </div>
+        <img class="rounded-md h-56 object-contain" src="../assets/emp/tech_stack.png" alt="Tech Stack" />
+      </div>
+      <div class="justify-self-center">
+        <img class="rounded-md h-64 object-contain" src="../assets/emp/wiring.png" alt="Raspberry Pi Wiring" />
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Contributors</h2>
+      <div class="flex flex-row gap-2 sm:gap-8 text-sm sm:text-base">
+        <p><a class="text-cyan-600 transition-all duration-300 hover:text-green-600"
+          href="https://github.com/Geesing" target="_blank" rel="noopener noreferrer">Jason Chew</a></p>
+          <p><a class="text-cyan-600 transition-all duration-300 hover:text-green-600"
+            href="https://github.com/Cobblestone5517" target="_blank" rel="noopener noreferrer">Daniel Kim</a></p>
       </div>
     </section>
 
     <section class="mb-16">
       <h2 class="text-lg sm:text-2xl mb-6 font-bold text-cyan-700">Tech Stack</h2>
-      <ul class="text-sm sm:text-base flex gap-4 flex-wrap">
+      <ul class="flex gap-4 flex-wrap text-sm sm:text-base">
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Artificial Intelligence</li>
+          React</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Machine/Deep Learning</li>
+          TypeScript</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          PyTorch</li>
+          CSS</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Python</li>
+          Firebase Hosting</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Prompt Engineering</li>
+          MQTT</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Sentence Transformer</li>
+          Raspberry Pi</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Gemma</li>
-        <li
-          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          GPT-2</li>
+          GPIO</li>
       </ul>
     </section>
   </article>
@@ -172,7 +178,7 @@
     body::-webkit-scrollbar-thumb:hover {
       background: rgba(0, 0, 0, 0.4);
     }
-    
+
     #verticalLine {
       border: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -223,4 +229,5 @@
     }
   </style>
 </body>
+
 </html>

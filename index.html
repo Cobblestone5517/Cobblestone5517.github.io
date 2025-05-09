@@ -157,6 +157,22 @@
 
         <div class="subtitleWrapper mb-2 ml-4 mt-12">
           <div class="iconWrapper">
+            <i class="fa-solid fa-tower-broadcast"></i>
+          </div>
+          <a class="text-slate-700 hover:text-slate-500 transition-all duration-200" target="_blank" rel="noopener noreferrer"
+            href="https://github.com/CS326MusicPlayer/EMP_UI">
+            <h2 class="text-md sm:text-xl font-bold">EMP: Environmental Music Player</h2>
+          </a>
+        </div>
+        <ul class="list-disc ml-4 font-light text-sm sm:text-base">
+          <li class="ml-8">Developed project that plays different soundtracks depending on the current state of precipitation, sunrise/sunset times, lighting conditions, and/or temperature, based on a Raspberry Pi’s location</li>
+          <li class="ml-8">Built an aesthetically pleasing frontend web interface that adaptively play soundtracks and change background as needed</li>
+          <li class="ml-8">Composed 6 music tracks to be played on the web interface</li>
+          <li class="ml-8">Skills: React (Vite + TypeScript), Firebase Hosting, MQTT, Raspberry Pi, Websocket, Music composition/arrangemenc</li>
+        </ul>
+
+        <div class="subtitleWrapper mb-2 ml-4 mt-12">
+          <div class="iconWrapper">
             <i class="fa-solid fa-globe"></i>
           </div>
           <a class="text-slate-700 hover:text-slate-500 transition-all duration-200" target="_blank" rel="noopener noreferrer"
@@ -279,7 +295,10 @@
           Express.js</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
-          Fastapi</li>
+          FastApi</li>
+        <li
+          class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
+          MQTT</li>
         <li
           class="inline-block bg-zinc-100 shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.1)] p-2 pl-4 pr-4 rounded-3xl font-light">
           SQL</li>
@@ -414,6 +433,25 @@
 
   </script>
   <style>
+    body::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+    }
+    body::-webkit-scrollbar-track {
+      background-color: transparent;
+      margin-right: -6px;
+    }
+    body::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-right: -6px;
+    }
+    body::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
     .tooltip {
       position: relative;
       display: inline-block;

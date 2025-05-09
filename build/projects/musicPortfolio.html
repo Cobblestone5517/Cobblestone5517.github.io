@@ -164,6 +164,25 @@
   </script>
 
   <style>
+    body::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+    }
+    body::-webkit-scrollbar-track {
+      background-color: transparent;
+      margin-right: -6px;
+    }
+    body::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-right: -6px;
+    }
+    body::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
     audio::-webkit-media-controls-panel {
       background-color: #ececec;
     }
